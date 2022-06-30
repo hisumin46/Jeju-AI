@@ -7,7 +7,7 @@ if __name__ == "__main__":
     
     cap.set(cv2.CAP_PROP_FRAME_WIDTH,1600)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT,1200)
-    i = 0
+    i = 197
     while True:
         success, img = cap.read()
         img1 = cv2.flip(img,1)
@@ -20,7 +20,7 @@ if __name__ == "__main__":
         elif key == 26:  # ctrl + z
             print("Capture Success!!!")
             cv2.IMREAD_UNCHANGED
-            cv2.imwrite("./data/train/seungmin/"+str(i)+ ".png", img)
+            cv2.imwrite("./data/train/non/"+str(i)+ ".png", img)
             i +=1
     cap.release()
     cv2.destroyAllWindows()
