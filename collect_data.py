@@ -20,7 +20,7 @@ if __name__ == "__main__":
         elif key == 26:  # ctrl + z
             print("Capture Success!!!")
             cv2.IMREAD_UNCHANGED
-            cv2.imwrite("/Users/hongseongmin/Desktop/tracking/test"+str(i)+ ".png", img)
+            cv2.imwrite("./data_image/non/"+str(i)+ ".png", img)
             i +=1
     cap.release()
     cv2.destroyAllWindows()
