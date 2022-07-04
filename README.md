@@ -437,6 +437,24 @@ Zero Padding
 - 컨볼루션 처리시 이미지 데이터 손실이 발생함
 - `Padding` 방식으로 해결 가능
 - 0으로 구성된 테두리를 이미지 가장자리에 감싸 줌
+```python
+  (x_train, y_train), (x_test, y_test) = datasets.mnist.load_data()
+  x_train = x_train /255.0
+  x_test = x_test / 255.0
+
+  model = models.Sequential()
+  model.add(layers.Conv2D(32, (3,3), activation="relu", input_shape=(28, 28, 1)))
+  model.add(layers.MaxPool2D((2,2)))
+  model.add(layers.Conv2D(16, (3,3), activation="relu"))
+  
+  model.add(layers.Flatten()) # 1차원으로 펼치기
+  model.add(layers.Dense(64, activation="relu"))
+  model.add(layers.Dense(10, activation="softmax"))
+  model.compile(loss = "sparse_categorical_crossentropy", optimizer = "adam", metrics = ["accuracy"])
+
+  log = model.fit(x_train, y_train, epochs = 3, batch_size = 16)
+  score = model.evaluate(x_test, y_test)
+```
 
 ## Tello 드론
 - 파이썬을 이용하여 드론 프로그래밍 가능한 드론
