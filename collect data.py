@@ -5,7 +5,6 @@ from PIL import Image
 if __name__ == "__main__":
     cap = cv2.VideoCapture(0)
     
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH,1600)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT,1200)
     i = 317
     while True:
