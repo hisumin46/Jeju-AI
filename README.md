@@ -351,10 +351,6 @@ conda install matplotlib
 - input 학습데이터
 - 모든 W들과 바이어스 b를 0이나 작은 난수로 초기화
 - while → 가중치 변경되지 않을때까지 반복
-    - 각 데이터의 $x^k$ 와 d^k 에 대하여
-    - $y^k(t) = f(w*x)$
-    - if  $d^k == y^k(t)$ → continue
-    - else  → 가중치 $w_i$에 대하여 $w_i(t+1) = w_i(t) +r($$d^k - y^k(t))x_i^k$
 
 
 ###  DNN
