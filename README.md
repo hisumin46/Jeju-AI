@@ -3,7 +3,7 @@
 
 5일동안 수업받은 내용을 토대로 정리하였고, 프로젝트를 진행하였습니다.
 ## 최종 프로젝트
-- 얼굴 인식 드론
+얼굴 인식 드론
 ### 데이터 가공
 ```python
 def process_data(path):
@@ -289,11 +289,6 @@ drone.streamoff()
 cv2.destroyAllWindows()
 drone.end()
 ```
-
-### Day 1 ~ 5
-- numpy, matplotlib 기초
-- ANN, DNN, CNN 기초
-- Tello 드론 제어
 
 ## 개발 환경
 ### 아나콘다
